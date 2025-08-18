@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GlucoScope Results</title>
+    <link rel="stylesheet" href="{% static 'predictor/style.css' %}">
+</head>
+<body class="results-page">
+<div class="dashboard-container">
+    <!-- SAME HEADER AS HOME -->
+  <header class="app-header">
+        <h1>GlucoScope Results</h1>
+    </header> 
+
+
+    <!-- Container -->
+<div class="results-container">
+
+        <!-- Status Card -->
+        <div class="result-card status-card">
+            <h2>Status</h2>
+            <p class="result-text">{{ prediction_text }}</p>
+        </div>
+
+
+                <!-- Diet -->
+        <div class="result-card">
+            <h2>Suggested Diet 🥗</h2>
+            <p>{{ diet }}</p>
+        </div>
+
+        <!-- Medication -->
+        <div class="result-card">
+            <h2>Suggested Medication 💊</h2>
+            <p>{{ medicine }}</p>
+            <strong>Timing:</strong> {{ timings }}
+        </div>
+
+
+
+        <!-- Input Overview -->
+        <div class="result-card">
+            <h2>Input Feature Overview 📊</h2>
+            <img src="{{ input_graph }}" alt="Input Overview Graph">
+        </div>
+
+        <!-- Probability -->
+        <div class="result-card">
+            <h2>Diabetes Level Probability (%)</h2>
+            <img src="{{ result_graph }}" alt="Prediction Probability Graph">
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>

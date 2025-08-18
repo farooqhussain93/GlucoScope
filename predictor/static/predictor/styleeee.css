@@ -1,0 +1,261 @@
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  min-height: 100vh;
+  margin: 0;
+
+  /* Background */
+  background: url("../bg.png") no-repeat center center fixed;
+  background-size: cover;
+
+background-repeat: no-repeat;
+
+}
+
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #2e7d32;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center; 
+  height: 100px; 
+}
+
+.header {
+  background-color: #2e7d32;
+  text-align: center;
+
+  padding: 35px 20px;
+}
+
+
+.logo {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem; 
+  font-weight: 600; 
+  letter-spacing: 1px;
+}
+
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #1b5e20;
+  font-family: 'Poppins', sans-serif;
+}
+
+header p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Form Grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #388e3c;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-group input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #cfd8dc;
+  border-radius: 10px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #4caf50;
+  outline: none;
+  background-color: #e8f5e9;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Button */
+.glow-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.glow-button:hover {
+  background-color: #388e3c;
+  transform: scale(1.03);
+}
+
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: #f7fbfd;
+}
+
+.form-wrapper {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  width: 100%;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .form-wrapper {
+    padding: 1.5rem;
+  }
+}
+
+
+.form-wrapper h1 {
+    text-align: center;
+}
+
+
+
+
+
+/* ========== Base Styles ========== */
+.results-page {
+    background: url("../bg.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* ========== Header (Matches Home Page) ========== */
+.app-header {
+    background-color: rgba(46, 125, 50, 0.9); /* Slight transparency */
+    text-align: center;
+    padding: 35px;
+    border-bottom: 3px solid #198754; /* Accent line */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    /* max-width: 100%; */
+    max-width: 928px; /* match container width */
+    margin: 0 auto 20px auto; /* center it above cards */
+}
+
+.app-header h1 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    text-align: center;
+}
+
+/* ========== Main Container ========== */
+.results-container {
+    max-width: 1000px;
+    /* margin: 0px auto 30px; */
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+      flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+/* ========== Card Styles ========== */
+.result-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 25px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center; /* Centers text inside each card */
+}
+
+.result-card h2 {
+    margin-bottom: 15px;
+    color: #1b5e20;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ========== Status Text ========== */
+.result-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+/* ========== Images in Cards ========== */
+.result-card img {
+    max-width: 90%;
+    border-radius: 8px;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+
